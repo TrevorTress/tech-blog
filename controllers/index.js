@@ -1,5 +1,6 @@
 const router = require('express').Router();
 
+// add relevant chunks to routes
 const apiRoutes = require('./api/');
 const homeRoutes = require('./home-routes.js');
 const dashboardRoutes = require('./dashboard-routes.js');
