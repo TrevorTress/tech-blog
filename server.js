@@ -45,6 +45,8 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
 
+// TO-DO: Add handlebars, finalize routes, code site logic in public js, add css in public css
+
 // WHEN I visit the site for the first time
 // THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
 
