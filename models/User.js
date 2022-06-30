@@ -22,7 +22,7 @@ User.init(
         username: {
             type: DataTypes.STRING,
             allowNull: false
-        },
+        },      
         password: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -40,10 +40,10 @@ User.init(
             },
 
             // before User is updated, use bcrypt to encrypt the pw
-            // async beforeUpdate(updatedUserData) {
-            //     updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-            //     return updatedUserData;
-            // }
+            async beforeUpdate(updatedUserData) {
+                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                return updatedUserData;
+            }
         },
         sequelize,
         timestamps: false,
